@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="Body Fat Calculator" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="BFCalculator_style.css" />
+        <script src="./BFCalculator.js"></script>
+        <title>Body Fat Calculator</title>
+    </head>
+
+    <body>
+        <div class="bodyFatCalculator">
+            <p>Gender:
+                <input type="radio" id="male" name="gender" value="Male" onClick="showHide()">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" onClick="showHide()">
+                <label for="female">Female</label>
+            </p>
+            <p>Height:
+                <input type="text" id="heightFeet" placeholder="Feet">
+                <input type="text" id="heightInches" placeholder="Inches">
+                <br><span id="heightError"></span>
+            </p>
+            <p>Neck:
+                <input type="text" id="neckFeet" placeholder="Feet">
+                <input type="text" id="neckInches" placeholder="Inches">
+                <br><span id="neckError"></span>
+            </p>
+            <p>Waist:
+                <input type="text" id="waistFeet" placeholder="Feet">
+                <input type="text" id="waistInches" placeholder="Inches">
+                <br><span id="wasteError"></span>
+            </p>
+            <p id="hips">Hips:
+                <input type="text" id="hipsFeet" placeholder="Feet">
+                <input type="text" id="hipsInches" placeholder="Inches">
+                <br><span id="hipsError"></span>
+            </p>
+            <p>
+                <button id="buttonCalculate" onclick="BFP()">Calculate</button>
+                <span id="Result"></span>
+            </p>
+        </div>
+        <script>
+            window.onload = function() {loadpage()};
+            function loadpage() {
+                document.getElementById("male").checked = true;
+                document.getElementById("hips").style.display = "none";
+            }
+        </script>
+    </body>
+</html>
