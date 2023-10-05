@@ -1,0 +1,79 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    color: wheat;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(214, 201, 183);
+}
+.Error {
+    color: darkred;
+}
+
+.bodyFatCalculator {
+    position: relative;
+    width: 408px;
+    top: 200px;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    padding: 15px;
+    background: cadetblue;
+    border-radius: 5px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border: 5px solid black;
+    vertical-align: 10px;
+}
+#description {
+    position: relative;
+    top: 150px;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    padding: 15px;
+    width: 408px;
+    background: cadetblue;
+    border-radius: 5px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border: 5px solid black;
+}
+#calculatorDescription{
+    color: wheat;
+}
+.inputText {
+    float: right;
+}
+input {
+    outline: none;
+    border: none;
+    border-left: 1px solid;
+    border-color: cadetblue;
+    padding: 5px;
+}
+button {
+    border: 1px solid white;
+    background-color: cadetblue;
+    display: block;
+    color: wheat;
+    display: inline;
+}
+#Result {
+    display: inline;
+}
+h2 {
+    color: wheat;
+    text-align: center;
+    margin: top;
+}
+h1{
+    text-align: center;
+    margin: top;
+    color:cadetblue;
+
+    font-size: 70px;
+    font-weight: 600;
+}
+
+
+/*remove blue hyperlink tag*/
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }

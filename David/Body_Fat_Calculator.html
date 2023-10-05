@@ -10,7 +10,19 @@
     </head>
 
     <body>
+        <h1>Body Fat Calculator</h1>
+        <hr>
+        <!--calculator description-->
+        <div id="description">
+            <h2 id="calculatorDescription">This body fat caculator is designed to calculate the percentage of body fat
+                using metric units. 
+            </h2>
+            <h2>The formulas used in calculations are based off of the U.S. Navey Method.</h2>
+        </div>
+        <br><br><br><br><br>
+        <!--body of calculator-->
         <div class="bodyFatCalculator">
+            <h2>Body Fat Percentage Calculator</h2>
             <p>Gender:
                 <input type="radio" id="male" name="gender" value="Male" onClick="showHide()">
                 <label for="male">Male</label>
@@ -18,36 +30,52 @@
                 <label for="female">Female</label>
             </p>
             <p>Height:
-                <input type="text" id="heightFeet" placeholder="Feet">
-                <input type="text" id="heightInches" placeholder="Inches">
-                <br><span id="heightError"></span>
+                <input type="text" id="heightInches" class="inputText" placeholder="Inches">
+                <input type="text" id="heightFeet" class="inputText" placeholder="Feet">
+                <br><br id="heightsError"><span id="heightError" class="Error"></span>
             </p>
             <p>Neck:
-                <input type="text" id="neckFeet" placeholder="Feet">
-                <input type="text" id="neckInches" placeholder="Inches">
-                <br><span id="neckError"></span>
+                <input type="text" id="neckInches" class="inputText" placeholder="Inches">
+                <input type="text" id="neckFeet" class="inputText" placeholder="Feet">
+                <br><br id="necksError"><span id="neckError" class="Error"></span>
             </p>
             <p>Waist:
-                <input type="text" id="waistFeet" placeholder="Feet">
-                <input type="text" id="waistInches" placeholder="Inches">
-                <br><span id="wasteError"></span>
+                <input type="text" id="waistInches" class="inputText" placeholder="Inches" required>
+                <input type="text" id="waistFeet" class="inputText" placeholder="Feet">
+                <br><br id="waistsError"><span id="waistError" class="Error"></span>
             </p>
             <p id="hips">Hips:
-                <input type="text" id="hipsFeet" placeholder="Feet">
-                <input type="text" id="hipsInches" placeholder="Inches">
-                <br><span id="hipsError"></span>
+                <input type="text" id="hipInches" class="inputText" placeholder="Inches">
+                <input type="text" id="hipFeet" class="inputText" placeholder="Feet">
+                <br><br id="hipsError"><span id="hipError" class="Error"></span>
             </p>
             <p>
                 <button id="buttonCalculate" onclick="BFP()">Calculate</button>
                 <span id="Result"></span>
             </p>
+            <a href="../Multi-health-calculator/mainPage.html">
+                <button type="button" id=>Return to Home Page</button>
+            </a>
+            
         </div>
+        
+        <!--window load function-->
         <script>
             window.onload = function() {loadpage()};
             function loadpage() {
                 document.getElementById("male").checked = true;
                 document.getElementById("hips").style.display = "none";
+                document.getElementById("heightsError").style.display = "none";
+                document.getElementById("necksError").style.display = "none";
+                document.getElementById("waistsError").style.display = "none";
+                document.getElementById("hipsError").style.display = "none";
             }
         </script>
     </body>
 </html>
+
+<!--
+    Templates used for calculator
+    https://www.calculator.net/body-fat-calculator.html?ctype=standard&csex=m&cage=25&cweightlbs=152&cheightfeet=5&cheightinch=10.5&cneckfeet=1&cneckinch=7.5&cwaistfeet=3&cwaistinch=1.5&chipfeet=2&chipinch=10.5&cweightkgs=70&cheightmeter=178&cneckmeter=50&cwaistmeter=96&chipmeter=92
+    https://www.youtube.com/watch?v=CGftYT6KcrM&list=LL&index=15
+-->
