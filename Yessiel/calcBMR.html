@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="x-icon" href="../gym.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Health Calculator</title>
+    <title>BMR Calculator</title>
     <script src="calcBMR.js"> </script>
     <link rel="stylesheet" href="styles.css">
 
@@ -15,111 +15,159 @@
 <body>
 
     <div class="main">
-        <h1>
-            <center>BMR Calculator</center>
-        </h1>
-        <hr>
 
-        <div id="text-box">
-            <h2 class="header">
-                What is BMR?
-            </h2>
-
-            <p>
-                BMR is an acronym to describe basal metabolic rate, or the energy (calories) your body needs to perform
-                basic functions such as breathing, blood circulation, cellular growth, body temperature regulation, hair
-                growth and hormone production.
-            </p>
-
-            <h2 class="header">What impacts BMR?</h2>
-
-            <p>Each person’s BMR is based on a variety of factors, some of which you can control (body composition) and
-                others
-                you can’t control (age, gender, hormones).
+        <div class="navbar">
+            <h1>BMR Calculator</h1>
             <ul>
-                <li><b>Age:</b> BMR and age are inversely related – children have a higher BMR compared to older adults
-                    who
-                    have
-                    lower BMR. In general, the older you get, the less muscle mass you have. As a result, BMR decreases.
-                </li>
-                <br>
-                <li>
-                    <b> Composition:</b> Muscle needs more energy than fat (fatty tissue doesn’t require as much
-                    energy), so
-                    people
-                    with more muscle mass and a lower body fat percentage have a higher BMR.
-                </li>
-                <br>
-                <li>
-                    <b>Body shape:</b> People with a larger body surface (tall and thin) area have a higher BMR. People
-                    who
-                    are
-                    shorter
-                    and weigh more have a lower BMR.
-                </li>
-                <br>
-                <li>
-                    <b>Gender:</b> Men usually are taller and have more muscle mass than women, which leads to a higher
-                    BMR.
-                </li>
-                <br>
-                <li>
-                    <b>Hormones:</b> Thyroxine, a hormone produced by the thyroid, controls how much energy your body
-                    uses.
-                    People with
-                    higher levels of thyroxine have a higher BMR.
-                </li>
+                <li><a href="../mainPage.html">Home Page</a></li>
+                <li><a href="">BMI</a></li>
+                <li><a href="Yessiel/calcBMR.html">BMR</a></li>
+                <li><a href="David/Body_Fat_Calculator.html">Body Fat</a></li>
+                <li><a href="">Box 4</a></li>
             </ul>
-            </p>
         </div>
 
+        <div class="content">
 
-        <br><br><br>
+            <div class="text-box">
+                <h2 class="header">
+                    -What is BMR?-
+                </h2>
+                <p>
+                    *BMR is an acronym to describe basal metabolic rate, or the energy (calories) your body needs to
+                    perform
+                    basic functions such as breathing, blood circulation, cellular growth, body temperature
+                    regulation,
+                    hair
+                    growth and hormone production.
+                </p>
+                <h2>-What impacts BMR?-</h2>
+                <p>Each person’s BMR is based on a variety of factors, some of which you can control (body
+                    composition)
+                    and
+                    others
+                    you can’t control (age, gender, hormones).
+                <ul>
+                    <li><b>Age:</b> BMR and age are inversely related – children have a higher BMR compared to older
+                        adults
+                        who
+                        have
+                        lower BMR. In general, the older you get, the less muscle mass you have. As a result, BMR
+                        decreases.
+                    </li>
+                    <br>
+                    <li>
+                        <b> Composition:</b> Muscle needs more energy than fat (fatty tissue doesn’t require as much
+                        energy), so
+                        people
+                        with more muscle mass and a lower body fat percentage have a higher BMR.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Body shape:</b> People with a larger body surface (tall and thin) area have a higher BMR.
+                        People
+                        who
+                        are
+                        shorter
+                        and weigh more have a lower BMR.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Gender:</b> Men usually are taller and have more muscle mass than women, which leads to a
+                        higher
+                        BMR.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Hormones:</b> Thyroxine, a hormone produced by the thyroid, controls how much energy your
+                        body
+                        uses.
+                        People with
+                        higher levels of thyroxine have a higher BMR.
+                    </li>
+                </ul>
+                </p>
+            </div>
 
 
-        <div id="calc-box">
-            <label id="gender">Gender:</label>
+            <div class="calc-box">
+                <h3>BMR Calculator</h3>
+                <br>
+                <label id="gender">Gender:</label>
+                <label>Male</label>
+                <input type="radio" name="gender" value="male" class="radio" required>
+                <label>Female</label>
+                <input type="radio" name="gender" value="female" class="radio" required>
+                <br><br>
+                <label>Age (15-80)</label>
+                <input id="age" type="text" placeholder="Age (15 - 80)" min="15" max="85" required>
+                <br><br>
+                <label>Height (Feet)</label>
+                <input id="heightFeet" type="text" placeholder="(Feet)" min="2" max="9" required>
+                <br><br>
+                <label>Heigth (Inches)</label>
+                <input id="heightInches" type="text" placeholder="(Inches)" min="0" max="11" required>
+                <br><br>
+                <label>Weight (Pounds)</label>
+                <input type="text" id="weight" placeholder="Pounds" min="20" max="900" required>
+                <br><br>
+                <p id="formula-1"></p>
+                <p id="result"></p>
+                <br>
+                <p id="formula-2"></p>
+                <p id="message"></p>
+                <hr>
+                <button type="button" onclick="startCalc()">Submit</button>
+                <!-- <br><br>
+                <a href="../mainPage.html" id="button-1">
+                    <button type="button">Back to Main Page</button>
+                </a> -->
+            </div>
 
-            <label>Male</label>
-            <input type="radio" name="gender" value="male" required>
+            <div class="formulas">
+                <h2>
+                    <center>Formulas Used </center>
+                </h2>
+                <br>
+                <h4> * Mifflin-St Jeor Equation:</h4>
+                <br>
+                <p>-For Men: BMR = 10W + 6.25H - 5A + 5 <br> -For Women: BMR = 10W + 6.25H - 5A - 161 </p>
+                <br>
+                <h4> * Revised Harris-Benedict Equation:</h4>
+                <br>
+                <p>-For Men: BMR = 13.397W + 4.799H - 5.677A + 88.362 <br> -For Women: BMR = 9.247W + 3.098H - 4.330A +
+                    447.593 </p>
+            </div>
 
-            <label>Female</label>
-            <input type="radio" name="gender" value="female" required>
+            <div class="FAQ">
+                <h1 class="faq-header">-FAQ-</h1>
+                <br><br>
+                <h1 class="faq-question">- WHAT IS A HEALTHY BMR?</h1>
+                <p> - This will vary person by person. Since your basal metabolic rate is based largely on involuntary
+                    functions like breathing and pumping blood, changes in your day-to-day activity don't do much to
+                    raise or lower this number.<br> However, increasing muscle mass does increase BMR, because muscle is
+                    metabolically "hungry" and it takes more energy to maintain more muscle. This means that when you
+                    have a lot of muscle mass, you'll burn more calories at rest.</p>
+                <h1 class="faq-question">-WHAT'S THE DIFFERENCE BETWEEN BMR AND RMR?-</h1>
+                <p> - The term BMR is sometimes used synonymously with RMR, which stands for "resting metabolic rate."
+                    The
+                    difference is that while BMR only measures basic processes of breathing, blood circulation, and
+                    temperature regulation in a completely resting state, RMR also includes energy expended by digestion
+                    and non-exercise daily movements, like getting dressed and lifting your fork to your
+                    mouth.<br><br>BMR
+                    and RMR numbers are typically close enough to be interchangeable, but if you're calculating your
+                    needs in order to gain or lose weight, pay attention to which number an equation calls for. If it's
+                    based on BMR, you can use the calculator above to get an estimate. If the equation uses RMR, use our
+                    RMR calculator, which will give you a slightly higher number.</p>
+                <h1 class="faq-question">-HOW CAN I USE MY BMR TO LOSE FAT OR GAIN MUSCLE?-</h1>
+                <p> - Once you use your BMR to determine your TDEE, you can make sure that the nutrition plan you follow
+                    is
+                    appropriate for your level of energy expenditure and that it isn't giving you too many or too few
+                    calories. Being armed with this knowledge, rather than guesstimating or blindly following a plan
+                    without scaling it to your individual needs, can make or break your muscle gains or fat loss.</p>
+            </div>
 
-            <br><br>
-
-            <label>Age (15-80)</label>
-            <input id="age" type="text" placeholder="Age (15 - 80)" min="15" max="85" required>
-
-            <br><br>
-
-            <label>Height (Feet)</label>
-            <input id="heightFeet" type="text" placeholder="(Feet)" min="2" max="9" required>
-
-            <br><br>
-
-            <label>Heigth in Inches</label>
-            <input id="heightInches" type="text" placeholder="(Inches)" min="0" max="11" required>
-
-            <br><br>
-
-            <label>Weight</label>
-            <input type="text" id="weight" placeholder="Weight" min="20" max="900" required>
-
-            <br><br>
-
-            <p id="result"></p>
-            <p id="message"></p>
-
-            <hr>
-
-            <button type="button" onclick="startCalc()">Submit</button>
-            <br><br>
-            <a href="../mainPage.html" id="button-1">
-                <button type="button">Back to Main Page</button>
-            </a>
         </div>
-        <br><br>
 
     </div>
 </body>
