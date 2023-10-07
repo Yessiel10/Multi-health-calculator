@@ -21,14 +21,21 @@ function startCalc() {
 function BMRCalculator(gender, age, heightFeet, heightInches, weight) {
     let output = document.querySelector("#result");
     const mssg = document.querySelector("#message");
+    const formOne = document.querySelector("#formula-1");
+    const formTwo = document.querySelector("#formula-2");
     if (gender === 'male') {
-        output.innerHTML = `${Math.round(menSedentaryForm(age, heightFeet, heightInches, weight)).toLocaleString() + " Approx. Calories"}`;
-        mssg.innerHTML = "Little to no excercise"
+        formOne.innerHTML = `Mifflin-St Jeor Equation`;
+        output.innerHTML = `${"BMR = " + Math.round(menSedentaryForm(age, heightFeet, heightInches, weight)).toLocaleString() + " Calories/Day"}`;
+        formTwo.innerHTML = `Harris-Benedict Equation`;
+        mssg.innerHTML = `${"BMR = " + Math.round(menHarrisEquation(age, heightFeet, heightInches, weight)).toLocaleString() + " Calories/Day"}`;
 
         return;
     }
     else if (gender === 'female') {
-        output.innerHTML = `${Math.round(womenSedentaryForm(age, heightFeet, heightInches, weight)).toLocaleString() + " Approx. Calories"}`;
+        formOne.innerHTML = `Mifflin-St Jeor Equation`;
+        output.innerHTML = `${"BMR = " + Math.round(womenSedentaryForm(age, heightFeet, heightInches, weight)).toLocaleString() + " Calories/Day"}`;
+        formTwo.innerHTML = `Harris-Benedict Equation`;
+        mssg.innerHTML = `${"BMR = " + Math.round(womenHarrisEquation(age, heightFeet, heightInches, weight)).toLocaleString() + " Calories/Day"}`;
         return;
     }
     else {
@@ -45,5 +52,17 @@ function menSedentaryForm(age, heightFeet, heightInches, weight) {
 function womenSedentaryForm(age, heightFeet, heightInches, weight) {
     let sum = 0;
     sum = ((10 * weight) + (6.25 * (heightInches + (heightFeet * 12))) - (5 * age) - 161);
+    return sum;
+}
+
+function menHarrisEquation(age, heightFeet, heightInches, weight) {
+    let sum = 0;
+    sum = ((13.397 * weight) + (4.799 * (heightInches + (heightFeet * 12))) - (5.667 * age) + 88.632);
+    return sum;
+}
+
+function womenHarrisEquation(age, heightFeet, heightInches, weight) {
+    let sum = 0;
+    sum = ((9.247 * weight) + (3.098 * (heightInches + (heightFeet * 12))) - (4.330 * age) + 447.593);
     return sum;
 }

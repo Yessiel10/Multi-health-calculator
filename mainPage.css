@@ -21,7 +21,8 @@
 }
 
 h1 {
-    width: 10px;
+    font-size: 70px;
+    font-weight: 600;
     cursor: pointer;
     font-family: Brush Script MT, Brush Script Std, cursive;
     color: #fff;
@@ -29,10 +30,11 @@ h1 {
 }
 
 .navbar ul li {
-    list-style: none;
+    list-style: circle;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 25px;
     position: relative;
+    height: 30px;
 }
 
 .navbar ul li a {
@@ -41,6 +43,8 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-size-adjust: 10px;
+    font-family: OCR A Std, monospace;
+    font-weight: bold;
 
 }
 
@@ -51,7 +55,7 @@ h1 {
     background: cadetblue;
     position: absolute;
     left: 0;
-    bottom: -10px;
+    bottom: -3px;
     transition: 0.5s;
 }
 
@@ -62,9 +66,8 @@ h1 {
 .content {
     width: 100%;
     position: relative;
-    top: 30%;
+    top: 35%;
     transform: translateY(-50%);
-    color: cadetblue;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -74,8 +77,10 @@ h1 {
 
 .content .intro {
     width: 100%;
-    color: #fff;
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    color: cadetblue;
+    font-family: OCR A Std, monospace;
+    font-weight: bold;
+    padding: 20px;
 }
 
 .content h2 {
@@ -88,21 +93,23 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     font-family: Brush Script MT, Brush Script Std, cursive;
-    ;
 }
 
 .content p {
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+.content .intro p {
+    font-family: OCR A Std, monospace;
 }
 
 .content .box-1,
 .box-2,
 .box-3,
 .box-4 {
-    height: 600px;
+    height: 650px;
     width: 15%;
     background-color: transparent;
     border: 5px solid rgb(138, 169, 204);

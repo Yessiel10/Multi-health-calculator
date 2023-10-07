@@ -1,44 +1,165 @@
-#calc-box {
-    height: 350px;
-    width: 500px;
-    padding: 10px;
-    margin: auto;
-    border: 5px solid black;
-    background-color: cadetblue;
-    text-align: center;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-#text-box {
-    height: 500px;
-    width: 800px;
-    padding: 10px;
-    margin: auto;
-    border: 5px solid black;
-    background-color: cadetblue;
+.main {
+    width: 100%;
+    height: 230vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../workout.jpg);
+    background-size: cover;
+    background-position: right;
+}
+
+.navbar {
+    width: 85%;
+    padding: 35px 0;
     text-align: center;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul li {
+    list-style: circle;
+    display: inline-block;
+    margin: 0 10px;
     position: relative;
+    height: 30px;
 }
 
-.header {
-    color: solid black;
+.navbar ul li a {
+    text-decoration: none;
+    color: cadetblue;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-size-adjust: 10px;
+    font-family: OCR A Std, monospace;
+    font-weight: bold;
+
 }
 
-body {
-    text-align: center;
-    background-color: rgb(214, 201, 183);
-    color: wheat;
+.navbar ul li ::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: cadetblue;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+}
+
+.navbar ul li :hover::after {
+    width: 100%;
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 40px;
     font-weight: 600;
-    color: cadetblue;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: #fff;
+    letter-spacing: 0.2em;
 }
 
 h2 {
     font-size: 20px;
     font-weight: 60;
-    color: #575c94;
+    background-image: linear-gradient(45deg, #4050c6, #ffffff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 25px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-box {
+    width: 100%;
+}
+
+.text-box {
+    height: 500px;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+    color: cadetblue;
+    font-family: OCR A Std, monospace;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.calc-box {
+    height: 380px;
+    width: 400px;
+    color: rgb(130, 197, 206);
+    border: 5px solid cadetblue;
+    text-align: center;
+    margin-left: 25%;
+    padding: 30px;
+    background-color: rgb(95, 158, 160, 0.20);
+    font-family: Didot, serif;
+    font-weight: bold;
+    font-size: large;
+    word-spacing: 0.2em;
+}
+
+.formulas {
+    height: 380px;
+    width: 400px;
+    color: rgb(130, 197, 206);
+    border: 5px solid cadetblue;
+    margin-left: 10%;
+    margin-right: 16%;
+    padding: 30px;
+    background-color: rgb(95, 158, 160, 0.20);
+    font-family: Didot, serif;
+    font-weight: bold;
+    font-size: large;
+    word-spacing: 0.2em;
+}
+
+.faq-header {
+    margin-left: 42%;
+    margin-right: 42%;
+    margin-top: 80px;
+    font-size: 100px;
+
+}
+
+.faq-question {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 80px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.FAQ p {
+    color: cadetblue;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 2%;
+    text-align: center;
+    position: relative;
+    color: cadetblue;
+    font-family: OCR A Std, monospace;
+    font-size: 25px;
+}
+
+.radio,
+button {
+    cursor: pointer;
+}
+
+input {
+    cursor: text;
 }
