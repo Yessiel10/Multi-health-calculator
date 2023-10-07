@@ -18,6 +18,7 @@
     background-color: cadetblue;
     text-align: center;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    position: relative;
 }
 
 .header {
@@ -39,5 +40,5 @@ h1 {
 h2 {
     font-size: 20px;
     font-weight: 60;
-    color: blue;
+    color: #575c94;
 }

@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="gym.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Health Calculator</title>
@@ -10,23 +11,130 @@
 </head>
 
 <body>
-    <main>
-        <h1>Health Calculator</h1>
-    </main>
 
-    <h3>This is the button for the BMI Calculator</h3>
-    <a href="./Portfolio/calcBRM.html">
-        <button type="button">BMI Calculator</button>
-    </a>
+    <div class="main">
 
-    <h3>This is the button for the BMR Calculator</h3>
-    <a href="./Yessiel/calcBMR.html">
-        <button type="button">BMR Calculator</button>
-    </a>
+        <div class="navbar">
+            <h1 id="Logo">Health Calculator</h1>
+            <ul>
+                <li><a href="">BMI</a></li>
+                <li><a href="">BMR</a></li>
+                <li><a href="">Body Fat</a></li>
+                <li><a href="">Box 4</a></li>
+            </ul>
+        </div>
 
-    <h3>This is the button for the Body Fat Calculator</h3>
-    <a href="./David/Body_Fat_Calculator.html">
-        <button type="button" onclick="BodyFatCalculator()">Body Fat Calculator</button>
+        <div class="content">
+            <div class="intro">
+                <h2>Intro to calculator</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has
+                    been
+                    the
+                    industry's
+                    standard dummy text ever since the 1500s.<br> when an unknown printer took a galley of type and
+                    scrambled it to
+                    make.</p>
+            </div>
+
+
+            <div class="box-1">
+                <h3>-BMI Calculator-</h3>
+                <p>* The Body Mass Index (BMI) Calculator can be used to calculate BMI value and corresponding
+                    weight
+                    status
+                    while
+                    taking age into consideration.</p>
+                <h3>-Limitations of BMI-</h3>
+                <p>* Although BMI is a widely used and useful indicator of healthy body weight, it does have its
+                    limitations.
+                    BMI
+                    is only an estimate that cannot take body composition into account. Due to a wide variety of
+                    body
+                    types
+                    as
+                    well as distribution of muscle, bone mass, and fat, BMI should be considered along with other
+                    measurements
+                    rather than being used as the sole method for determining a person's healthy body weight.</p>
+                <a href="./David/Body_Fat_Calculator.html">
+                    <button type="button"><span></span>BMI Calculator</button>
+                </a>
+            </div>
+
+            <div class="box-2">
+                <h3>-BMR Calculator-</h3>
+                <p>*Your Basal Metabolic Rate (BMR) is the number of calories you burn as your body performs basic
+                    (basal)
+                    life-sustaining function. Commonly also termed as Resting Metabolic Rate (RMR), which is the
+                    calories
+                    burned
+                    if
+                    you stayed in bed all day. In either case, many utilize the basal metabolic rate formula to
+                    calculate
+                    their
+                    body’s metabolism rate.</p>
+                <h3>-Limitations of BRM calculator-</h3>
+                <p>*The only factor it omits is lean body mass and thus the ratio of muscle-to-fat a body has.
+                    Remember,
+                    leaner
+                    bodies need more calories than less leaner ones. Therefore, this equation will be very accurate
+                    in
+                    all
+                    but
+                    the very muscular (will underestimate calorie needs) and the very overweight (will over-estimate
+                    calorie
+                    needs).</p>
+                <a href="./Yessiel/calcBMR.html">
+                    <button type="button"><span></span>BMR Calculator</button>
+                </a>
+            </div>
+
+            <div class="box-3">
+                <h3>-Body Fat Calculator-</h3>
+                <p>*Our calculator uses a method involving equations developed at the Naval Health Research Center
+                    by
+                    Hodgdon
+                    and Beckett in 1984.
+                <ul>
+                    <li>
+                        Measure the circumference of the subject's waist at a horizontal level around the navel for
+                        men,
+                        and
+                        at
+                        the level with the smallest width for women. Ensure that the subject does not pull their
+                        stomach
+                        inwards
+                        to obtain accurate measurements.
+                    </li>
+                    <li>Measure the circumference of the subject's neck starting below the larynx, with the tape
+                        sloping
+                        downward to the front. The subject should avoid flaring their neck outwards.
+                    </li>
+                    <li>
+                        For women only: Measure the circumference of the subject's hips at the largest horizontal
+                        measure.
+                    </li>
+                </ul>
+                <br>
+                <h3>-Limitations of Body Fat Calculator-</h3>
+                <p>*Body fat scales can be very accurate, but due to the number of factors affecting the reading, expect
+                    the result to be off by about 5% for the best scales on the market. To maximise their accuracy,
+                    follow their instructions as closely as possible.</p>
+                </p>
+                <a href="./David/Body_Fat_Calculator.html">
+                    <button type="button" onclick="BodyFatCalculator()"><span></span>Body Fat Calculator</button>
+                </a>
+            </div>
+
+            <div class="box-4">
+                <h3>- Box 4 Calculator-</h3>
+                <a href="">
+                    <button type="button" onclick=""><span></span>Another calc</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>
