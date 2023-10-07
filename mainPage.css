@@ -1,23 +1,152 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(workout.jpg);
+    background-size: cover;
+    background-position: right;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
     text-align: center;
-    background-color: rgb(214, 201, 183);
-    color: wheat;
+    justify-content: space-between;
 }
 
 h1 {
-    font-size: 50px;
+    width: 10px;
+    cursor: pointer;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: #fff;
+    letter-spacing: 0.2em;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: cadetblue;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-size-adjust: 10px;
+
+}
+
+.navbar ul li ::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: cadetblue;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li :hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    color: cadetblue;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.content .intro {
+    width: 100%;
+    color: #fff;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+.content h2 {
+    font-size: 70px;
+    margin-top: 80px;
+    font-size: 70px;
     font-weight: 600;
-    background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+    background-image: linear-gradient(45deg, #4050c6, #ffffff);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    ;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+.content .box-1,
+.box-2,
+.box-3,
+.box-4 {
+    height: 600px;
+    width: 15%;
+    background-color: transparent;
+    border: 5px solid rgb(138, 169, 204);
+    border-radius: 25px;
+    color: cadetblue;
+    padding: 20px;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 h3 {
-    font-size: 25px;
-    font-weight: 60;
-    background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+    background-image: linear-gradient(45deg, #4f8ad6, #ffffff);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    letter-spacing: 0.1em;
+}
+
+button {
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid cadetblue;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+span {
+    background: cadetblue;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
 }
