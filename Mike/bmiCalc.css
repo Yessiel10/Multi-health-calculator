@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../workout.jpg);
+    background-size: cover;
+    background-position: right;
+}
+
+.navbar {
+    width: 85%;
+    padding: 35px 0;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    margin: auto;
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul li {
+    list-style: circle;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    height: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: cadetblue;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-size-adjust: 10px;
+    font-family: OCR A Std, monospace;
+    font-weight: bold;
+
+}
+
+.navbar ul li ::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: cadetblue;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+}
+
+.navbar ul li :hover::after {
+    width: 100%;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: #fff;
+    letter-spacing: 0.2em;
+}
+
+#message {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
