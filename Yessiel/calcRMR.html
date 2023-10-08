@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="../gym.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RMR Calculator</title>
+    <script src="calcRMR.js"> </script>
+    <link rel="stylesheet" href="calcRMR.css">
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="navbar">
+            <h1>BMR Calculator</h1>
+            <ul>
+                <li><a href="../mainPage.html">Home Page</a></li>
+                <li><a href="">BMI</a></li>
+                <li><a href="calcBMR.html">BMR</a></li>
+                <li><a href="../David/Body_Fat_Calculator.html">Body Fat</a></li>
+                <li><a href="calcRMR.html">RMR</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+
+            <div class="text-box">
+                <h2 class="header">
+                    -What is RMR?-
+                </h2>
+                <br>
+                <p>
+                    *RMR is the abbreviation of resting metabolic rate. This parameter tells how many calories your body
+                    requires to perform the most basic functions (to keep itself alive) while resting.
+                </p>
+                <br>
+                <h2>-What can affect your resting metabolic rate?-</h2>
+                <br>
+                <p> * A few factors can significantly impact your RMR: <br>
+                <ul>
+                    <br>
+                    <li style="text-align: left;"><b> Age:</b>RMR decreases with age.
+                    </li>
+                    <br>
+                    <li style="text-align: left;">
+                        <b> Genetics:</b> can influence your natural level of RMR.
+                    </li>
+                    <br>
+                    <li style="text-align: left;">
+                        <b>Climate :</b> living in a cold environment can increase your RMR.
+                    </li>
+                    <br>
+                    <li style="text-align: left;">
+                        <b>Meals:</b> regularly eating meals will increase your RMR.
+                    </li>
+                    <br>
+                    <li style="text-align: left;">
+                        <b>Pregnancy </b> also can cause an increase in RMR.
+                    </li>
+                    <br>
+                    <li style="text-align: left;">
+                        <b>Crash-dieting: </b> it decreases the RMR.
+                    </li>
+                </ul>
+                </p>
+            </div>
+
+
+            <div class="calc-box">
+                <h3>RMR Calculator</h3>
+                <br>
+                <label id="gender">Gender:</label>
+                <label>Male</label>
+                <input type="radio" name="gender" value="male" class="radio" required>
+                <label>Female</label>
+                <input type="radio" name="gender" value="female" class="radio" required>
+                <br><br>
+                <label>Age</label>
+                <input id="age" type="text" placeholder="Age" min="15" max="85" required>
+                <br><br>
+                <label>Height (Ft)</label>
+                <input id="heightFeet" type="text" placeholder="(Feet) Ex. 5 Ft" min="2" max="9" required>
+                <br><br>
+                <label>Heigth (In)</label>
+                <input id="heightInches" type="text" placeholder="(Inches) Ex. 11 In" min="0" max="11" required>
+                <br><br>
+                <label>Weight (lbs)</label>
+                <input type="text" id="weight" placeholder="Pounds" min="20" max="900" required>
+                <br><br>
+                <p id="formula-1"></p>
+                <p id="result"></p>
+                <br>
+                <hr>
+                <button type="button" onclick="startCalc()">Submit</button>
+            </div>
+
+            <div>
+                <div class="formulas">
+                    <h3>Formulas Used:</h3>
+                    <h3> Men :</h3>
+                    <p>66 + (13.7 x weight) + (5 x height) - (6.8 x age)</p>
+                    <h3>Women : </h3>
+                    <p> 655 + (9.6 x
+                        weight) + (1.85 x height) - (4.7 x age)</p>
+
+                </div>
+                <iframe width="560" height="315" id="video-rmr"
+                    src="https://www.youtube.com/embed/06LTNvITSH4?si=GHpVY_rgUo3mCQqZ" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="FAQ">
+                <h1 class="faq-header">-FAQ-</h1>
+                <br><br>
+                <h1 class="faq-question">- BMR vs. RMR -</h1>
+                <p> - Besides RMR, there is also a term basal metabolic rate (BMR). This is something different than
+                    resting metabolic rate. BMR measurements are more strict than those of RMR – the BMR test requires a
+                    24-hour rest and an overnight fast, while the RMR needs only a 15-minute relaxation period.
+                    <br>
+                    - The BMR doesn't take into account, e.g., calories utilized for food digestion. That's the reason
+                    why
+                    RMR is considered to be more reliable in the estimation of resting calories. Your body is usually
+                    digesting some amount of food at every moment of time.
+                </p>
+                <h1 class="faq-question">- Is RMR testing accurate? -</h1>
+                <p> - The most accurate way to find your RMR is to visit a licensed facility. The test involves you
+                    breathing into a small device for roughly 10 minutes, as most of the CO2 produced during respiration
+                    leaves the body via the mouth. This procedure is, however, expensive, and using an online calculator
+                    is a free alternative, with an accuracy of +/- 300 calories.</p>
+                <h1 class="faq-question">- Do long fasts slow your RMR? -</h1>
+                <p> - The current research suggests that fasting does not affect RMR in a significant way. However, this
+                    is a new field of interest, so the research is somewhat limited. There may be an unknown effect, or
+                    the research could be wrong.
+                    <br>
+                    - Please consult your doctor before going on any serious fasts and consider stopping if you begin to
+                    exhibit any unwanted symptoms.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
